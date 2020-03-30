@@ -1,0 +1,30 @@
+常见编译型高级编程语言数据库接口
+
+ADO：（ActiveX Data Object）ActiveX数据对象。
+ADO是微软于1996年冬推出的一种面向对象的、基于COM思想的数据库访问接口。由于OLE DB标准的API是C++ API,只能供C++语言调用（这也是OLEDB没有改名为ActiveX DB的原因，ActiveX是与语言无关的组件技术)。为了使流行的各种编程语言都可以编写符合OLE DB标准的应用程序,微软在OLE DB API之上，提供了一种面向对象、与语言无关的应用编程接口，这就是ActiveX Data Objects，简称ADO。实质上，ADO就是将OLE DB的面向C++的复杂接口封装起来，提供了便于操作的接口。还可以说ADO其实只是一个应用程序层次的界面，它用OLE DB来与数据库通信，ADO为OLEDB提供高层应用API函数。
+
+
+DAO：(Data Access Object)数据访问对象。
+它显露了 Microsoft Jet 数据库引擎（由 Microsoft Access 所使用），并允许 Visual Basic 开发者通过 ODBC 像直接连接到其他数据库一样，直接连接到 Access 表。
+所以如果数据库是Access数据库且是本地使用的话，建议使用这种访问方式。
+
+RDO：(Remote Data Objects)远程数据对象
+让写Windows应用程序的程序师能够进入微软和其他的数据库供给者的数据库。
+然后，程序中RDO 陈述使用微软的底层数据存取对象 (DAO) 来实际进入数据库。 数据库供给者写入DAO接口。
+是一个到 ODBC 的、面向对象的数据访问接口，它同易于使用的 DAO style组合在一起，提供了一个接口，形式上展示出所有 ODBC 的底层功能和灵活性。尽管 RDO 在很好地访问 Jet 或 ISAM 数据库方面受到限制，而且它只能通过现存的 ODBC 驱动程序来访问关系数据库。但是，RDO 已被证明是许多 SQL Server、Oracle 以及其他大型关系数据库开发者经常选用的最佳接口。RDO 提供了用来访问存储过程和复杂结果集的更多和更复杂的对象、属性，以及方法。
+
+
+OLE DB：(Object Linking and Embedding, Database)对象连接嵌入数据库
+是微软的战略性的通向不同的数据源的低级应用程序接口，OLE DB不仅包括微软资助的标准数据接口ODBC的结构化查询语言（SQL）能力，还具有面向其他非SQL数据类型的通路。
+OLE DB 是建立在 ODBC 功能之上的一个开放规范，ODBC 是为访问关系型数据库而专门开发的，OLE DB 则用于访问关系型和非关系型信息源。
+
+
+2. 常见解释型高级编程语言数据库接口
+
+JDBC（java DataBase Connectivity）
+管方（sun）公司定义的一套操作所有关系型数据库的规则，即接口。各个数据库厂商去实现这套接口，提供数据库驱动jar包。我们可以使用这套接口（JDBC）编程，真正执行代码是驱动jar包中的实现类。
+
+3. python编程语言连接数据库的不同方式比较
+1）PyMySQL 驱动连接
+2）MySQLdb库来连接
+https://www.cnblogs.com/dingjiaoyang/p/11004404.html 
